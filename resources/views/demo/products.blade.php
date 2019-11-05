@@ -38,7 +38,7 @@
                     <p class="lead">
               <span class="mr-1">
               </span>
-                        <span>Ksh.100</span>
+                        <span>Ksh.10</span>
                     </p>
 
                     <p class="lead font-weight-bold">Description</p>
@@ -51,7 +51,7 @@
                         <!-- Default input -->
                         {{csrf_field()}}
                         <input type="hidden" value="Smart Tv" name="added_product">
-                        <input type="hidden" value="100" name="price">
+                        <input type="hidden" value="10" name="price">
                         <button class="btn btn-primary btn-md my-0 p" name="add-to-cart" >Add to cart
                             <i class="fa fa-shopping-cart ml-1"></i>
                         </button>
@@ -98,12 +98,12 @@
                 <p class="lead">
               <span class="mr-1">
               </span>
-                    <span>Ksh.50</span>
+                    <span>Ksh.5</span>
                 </p>
                 <form action="{{route('cart.product')}}" class="d-flex justify-content-center" method="POST">
                     {{csrf_field()}}
                     <input type="hidden" value="Huawei Y9" name="added_product">
-                    <input type="hidden" value="50" name="price">
+                    <input type="hidden" value="5" name="price">
                     <button class="btn btn-primary btn-md my-0 p" type="submit" name="add-to-cart">Add to cart
                         <i class="fa fa-shopping-cart ml-1"></i>
                     </button>
@@ -122,12 +122,12 @@
                     <p class="lead">
               <span class="mr-1">
               </span>
-                        <span>Ksh.90</span>
+                        <span>Ksh.9</span>
                     </p>
                     <form action="{{route('cart.product')}}" class="d-flex justify-content-center" method="POST">
                         {{csrf_field()}}
                         <input type="hidden" value="ThinkPad" name="added_product">
-                        <input type="hidden" value="90" name="price">
+                        <input type="hidden" value="9" name="price">
                         <button class="btn btn-primary btn-md my-0 p" type="submit" name="add-to-cart">Add to cart
                             <i class="fa fa-shopping-cart ml-1"></i>
                         </button>
@@ -146,12 +146,12 @@
                     <p class="lead">
               <span class="mr-1">
               </span>
-                        <span>Ksh.75</span>
+                        <span>Ksh.7.50</span>
                     </p>
                     <form action="{{route('cart.product')}}" class="d-flex justify-content-center" method="POST">
                         {{csrf_field()}}
                         <input type="hidden" value="Samsung s7" name="added_product">
-                        <input type="hidden" value="75" name="price">
+                        <input type="hidden" value="7.50" name="price">
                         <button class="btn btn-primary btn-md my-0 p" type="submit" name="add-to-cart">Add to cart
                             <i class="fa fa-shopping-cart ml-1"></i>
                         </button>
@@ -170,5 +170,5 @@
  @endsection
 
 @section('scripts')
-    <script id="qbn" src="https://checkout.soofapay.com/soofa.js" type="text/javascript" data-till="5002"></script>
+    <script id="qbn" src="https://checkout.soofapay.com/v1/soofa.min.js" type="text/javascript" data-till="5002"></script>
 @endsection

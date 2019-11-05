@@ -39,7 +39,7 @@
                     <div class="row">
                         <form class="soofa" action="{{route('qubeans.checkout')}}" method="POST">
                             @csrf
-                            <input type="text" name="amount" value="{{1}}" hidden />
+                            <input type="text" name="amount" value="{{$totalPrice}}" hidden />
                             <input type="text" name="reference" value="Laravel Demo" hidden />
                             <input type="text" name="tid" value="" hidden />
                             <input id="ww" type="button" class="qbn-submit btn btn-sm btn-success" value="Checkout" />
