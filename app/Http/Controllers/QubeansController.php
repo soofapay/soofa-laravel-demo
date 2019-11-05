@@ -142,15 +142,13 @@ class QubeansController extends Controller
             Session::forget('cart');
         }
 
-        return redirect()->route('home');
+        return redirect()->back();
     }
 
     public function find(Request $request){
         $soofa = new Soofa(env('TILL_NO'), env('SECRET_KEY'));
         $soofa->find($request->tid);
         $result = $soofa->getTransaction();
-
-//        $this->webhook($result);
 
         $transaction = new Qubean();
         $transaction->payment_status = $result[0]->status;
@@ -168,7 +166,4 @@ class QubeansController extends Controller
 
     }
 
-    public function webhook($data){
-        dd($data[0]);
-    }
 }
